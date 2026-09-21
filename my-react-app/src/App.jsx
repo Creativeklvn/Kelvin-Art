@@ -211,7 +211,7 @@ reflection.
     Instagram
   </a>
 
-  <a href="mailto:kelvinuneze@email.com">
+  <a href="mailto:kelvinuneze@emagmail.com">
     Email
   </a>
 
