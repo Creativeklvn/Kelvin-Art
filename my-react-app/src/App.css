@@ -1,0 +1,358 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f3ef;
+  color: #171717;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5%;
+
+  background: rgba(245, 243, 239, 0.9);
+  backdrop-filter: blur(10px);
+
+  z-index: 1000;
+}
+
+nav > a {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav div {
+  display: flex;
+  gap: 35px;
+}
+
+nav div a {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+nav a:hover {
+  opacity: 0.5;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  padding: 120px 5%;
+  scroll-margin-top: 80px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+#home {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-top: 150px;
+}
+
+#home h1 {
+  font-size: clamp(55px, 10vw, 150px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+#home p {
+  margin-top: 25px;
+
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+#home img {
+  width: 100%;
+  height: 65vh;
+  object-fit: contain;
+  margin-top: 70px;
+
+  object-position: center;
+}
+
+
+/* =========================
+   WORKS
+========================= */
+
+#works {
+  padding-top: 15px;
+}
+
+#works h2,
+#about h2,
+#contact h2 {
+  margin-bottom: 60px;
+
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #171717;
+}
+
+#works > div {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+#works img {
+  height: 500px;
+  transition: transform 0.4s ease;
+}
+
+#works img:hover {
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about p {
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+  min-height: 70vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contact a,
+#contact p {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+#contact a:hover {
+  opacity: 0.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 30px 5%;
+
+  border-top: 1px solid #d4d1cb;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  nav {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  nav > a {
+    font-size: 15px;
+  }
+
+  nav div {
+    gap: 15px;
+  }
+
+  nav div a {
+    font-size: 11px;
+  }
+
+  section {
+    padding: 90px 20px;
+  }
+
+  #home {
+    padding-top: 120px;
+  }
+
+  #home h1 {
+    font-size: 55px;
+    letter-spacing: -3px;
+  }
+
+  #home img {
+    height: 55vh;
+    margin-top: 45px;
+  }
+
+  #works {
+    padding-top: 100px;
+  }
+
+  #works > div {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #works img {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  #about p {
+    font-size: 18px;
+  }
+
+  #contact p {
+    font-size: 20px;
+  }
+
+  footer {
+    padding: 25px 20px;
+  }
+}
+
+
+
+/* =========================
+   WORKS
+========================= */
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.works-grid img {
+  height: 500px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.works-grid img:hover {
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   IMAGE LIGHTBOX
+========================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  z-index: 2000;
+
+  cursor: pointer;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  cursor: default;
+}
