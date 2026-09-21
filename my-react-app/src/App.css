@@ -127,10 +127,16 @@ section {
   height: 65vh;
   object-fit: contain;
   margin-top: 70px;
-
   object-position: center;
 }
 
+#about img {
+  width: 30%;
+margin-bottom: 20px ;
+  object-fit: contain;
+align-self: center;
+  object-position: center;
+}
 
 /* =========================
    WORKS
@@ -175,11 +181,10 @@ section {
 ========================= */
 
 #about {
-
-
   display: flex;
   flex-direction: column;
   justify-content: center;
+    margin-bottom: -92px;
 }
 
 #about p {

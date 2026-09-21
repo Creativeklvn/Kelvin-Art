@@ -167,8 +167,9 @@ function App() {
 
       {/* ABOUT */}
       <section id="about">
+      
         <h2>ARTIST BIOGRAPHY</h2>
-
+        <img src="/artworks/Capture.JPG" alt="cap" />
         <p>
         Kelvin Uneze is a visual artist born in Lagos, Nigeria. He had
 his National Diploma and Higher Diploma (HND) in Painting
