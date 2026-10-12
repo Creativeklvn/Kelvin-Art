@@ -42,6 +42,12 @@ function App() {
           />
 
                     <img
+            src="/artworks/13.JPG"
+            alt="Artwork 13"
+            onClick={() => setSelectedImage("/artworks/13.JPG")}
+          />
+
+                    <img
             src="/artworks/f.JPG"
             alt="Artwork 1"
             onClick={() => setSelectedImage("/artworks/f.JPG")}
